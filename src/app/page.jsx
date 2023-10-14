@@ -118,6 +118,18 @@ function Home() {
             }
         </div>
       </section>
+       <section className='w-full pt-[70px]' id="Articulos">
+        <Subtitle>Artículos</Subtitle>
+        <div className='lg:grid lg:grid-cols-2 lg:gap-4 py-5 mt-5'>
+          <img src={userDB && userDB.articleIMG.IMG2023.url} className='relative left-0 right-0 top-0 bottom-0 m-auto h-full pt-5 pb-5' alt="" />
+          <ul className='border-l-2 border-[#01C89E] pl-5 pt-5 pb-5 flex flex-col justify-center '>
+            {
+              userDB && userDB.articles !== undefined && Object.keys(userDB.articles).map((i, index) => <List i={i} url={userDB.articles[i] && userDB.articles[i]['url']} title={userDB.articles[i]['titulo de articulo']} key={index} />
+              )
+            }
+          </ul>
+        </div>
+      </section>
       {/* <section className='w-full pt-[70px]' id="Testimonios">
         <Subtitle>Testimonios</Subtitle>
         <div className='min-h-screen w-full flex flex-col justify-between items-center lg:flex-row justify-around items-center '>
@@ -295,9 +307,9 @@ function Home() {
         <div
           className="p-4 text-center"
           style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}>
-          © 2023 Copyright:
-          <a className="text-whitehite" href="https://swoou.com/"
-          >Swoou </a
+          © 2023 Copyright
+          <a className="text-whitehite underline" href="https://swoou.com/"
+          >Swoou</a
           >
         </div>
       </footer>
