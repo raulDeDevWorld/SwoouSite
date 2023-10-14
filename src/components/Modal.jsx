@@ -95,15 +95,11 @@ export default function Modal({ theme, styled, click, children, }) {
             ['servicio remoto']: check,
             [e.target[1].name]: e.target[1].value,
             [e.target[2].name]: e.target[2].value,
-            [e.target[3].name]: e.target[3].value,
-            [e.target[4].name]: e.target[4].value,
-            [e.target[5].name]: e.target[5].value,
-            [e.target[6].name]: e.target[6].value,
         }
 
         console.log(obj)
-        e.target[0].files[0] && uploadIMG(`services/${item !== undefined ? item.uid : filename}`, 'services', filename, e.target[0].files[0], obj, setUserData, setUserSuccess, 'url')
-        e.target[0].files[0] === undefined && writeUserData(`services/${item !== undefined ? item.uid : filename}`, obj, setUserData, setUserSuccess)
+        e.target[0].files[0] && uploadIMG(`testimonies/${item !== undefined ? item.uid : filename}`, 'testimonies', filename, e.target[0].files[0], obj, setUserData, setUserSuccess, 'url')
+        e.target[0].files[0] === undefined && writeUserData(`testimonies/${item !== undefined ? item.uid : filename}`, obj, setUserData, setUserSuccess)
 
     }
 
