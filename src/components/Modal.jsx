@@ -92,7 +92,6 @@ export default function Modal({ theme, styled, click, children, }) {
 
         const filename = generateUUID()
         const obj = {
-            ['servicio remoto']: check,
             [e.target[1].name]: e.target[1].value,
             [e.target[2].name]: e.target[2].value,
         }
