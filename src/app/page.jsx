@@ -110,9 +110,9 @@ function Home() {
         <Subtitle>Testimonios</Subtitle>
         <div className='min-h-screen w-full flex flex-col justify-between items-center lg:grid lg:grid-cols-3'>
             {
-              userDB && userDB.testimonies && userDB.testimonies !== undefined && userDB.testimonies.map((i, index) =>
+              userDB && userDB.testimonies && userDB.testimonies !== undefined && Object.keys(userDB.testimonies).map((i, index) =>
                 <div key={index}>
-                  <CardA image={i.url} i={i} index={index}></CardA>
+                  <CardA image={userDB.testimonies[i].url} i={userDB.testimonies[i]} index={index}></CardA>
                 </div>
               )
             }
