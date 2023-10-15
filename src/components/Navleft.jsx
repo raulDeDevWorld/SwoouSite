@@ -28,7 +28,7 @@ export default function Navbar({ children, funcion }) {
     }
 
     const handlerShare = () => {
-        window.open('https://wa.me/?text=https://alvarogc.com/', '_blank')
+        window.open('https://wa.me/?text=https://lanfvet.vercel.app/', '_blank')
     }
     return (
         <>
