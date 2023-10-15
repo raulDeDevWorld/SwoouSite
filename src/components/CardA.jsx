@@ -5,7 +5,7 @@ import Button from '@/components/Button'
 export default function Card({i}) {
     return (
 
-        <div className="w-full max-w-sm bg-white bg-red-500  shadow-[0px_0px_3px_0.1px_#00A582] rounded-lg  mt-5">
+        <div className="w-full max-w-sm bg-white rounded-lg  mt-5">
         
             <div className="flex flex-col items-center ">
                 <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={i.url} alt="Bonnie image" />

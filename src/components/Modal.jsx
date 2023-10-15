@@ -226,8 +226,8 @@ export default function Modal({ theme, styled, click, children, }) {
             return <div className="fixed top-0 flex justify-center w-full h-auto bg-[#000000b4] p-0 z-40" onClick={close}>
                 <form className="relative w-[95%] h-screen overflow-y-scroll lg:w-[50%] bg-white border-b border-gray-900/10 pt-16 pb-4 px-5" onSubmit={addService} onClick={(e)=>e.stopPropagation()}>
                     <div className="col-span-full">
-                        <h2 className="text-base m-semibold leading-7 text-gray-900">Administrar Productos</h2>
-                        <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-gray-900">Foto de Producto</label>
+                        <h2 className="text-base m-semibold leading-7 text-gray-900">Administrar Servicios</h2>
+                        <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-gray-900">Foto de Servicio</label>
                         <div className="w-full flex justify-center">
                             <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10 md:w-[250px] md:h-[200px]" style={{ backgroundImage: `url('${dataURL && dataURL.servicioIMG && dataURL.servicioIMG ? dataURL.servicioIMG : (item && item.url)}')`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
                                 <div className="text-center">
@@ -236,7 +236,7 @@ export default function Modal({ theme, styled, click, children, }) {
                                     </svg>
                                     <div className="mt-4 flex text-sm leading-6 text-gray-600">
                                         <label htmlFor="servicioIMG" className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
-                                            <span>Foto de producto</span>
+                                            <span>Foto de Servicio</span>
                                             <input id="servicioIMG" name="servicioIMG" onChange={handlerImage} type="file" className="sr-only" />
                                         </label>
                                         <p className="pl-1">Puede ser GIF</p>
@@ -266,15 +266,15 @@ export default function Modal({ theme, styled, click, children, }) {
                     <div className="border-b border-gray-900/10 pb-12">
                         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                             <div className="sm:col-span-3">
-                                <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Título de producto</label>
+                                <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Título de servicio</label>
                                 <input type="text" name="titulo de servicio" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={item && item['titulo de servicio']} />
                             </div>
                             <div className="sm:col-span-3">
-                                <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Marca o especificación</label>
+                                <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">Especificación</label>
                                 <input type="text" name="marca" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={item && item['marca']} />
                             </div>
                             <div className="sm:col-span-3">
-                                <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-900">Descripción de producto</label>
+                                <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-900">Descripción de servicio</label>
                                 <input type="text" name="descripcion de servicio" className="block w-full rounded-md border-0 p-1.5 mt-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={item && item['descripcion de servicio']} />
                             </div>
                         
